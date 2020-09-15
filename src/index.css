@@ -5,8 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightslategray;
+  background-image: url('https://images.unsplash.com/photo-1513639231791-f8d3fc39db82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');
+  padding: 0;
+  background-size: cover;
+  box-sizing: border-box;
 }
-
+h1,h2,h3,h4,h5,p,a{
+   padding: 0;
+   margin: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

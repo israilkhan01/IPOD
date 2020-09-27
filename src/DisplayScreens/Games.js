@@ -5,21 +5,17 @@ class Games extends React.Component{
   render(){
     const styles={
         Games:{
-        // width:150,
-        // height:50,
-        display:'flex',
-        justifyContent:'space-between',
-        padding:'15px 0px',
-        fontWeight:300,
-        borderBottom:'0.1px solid lightgrey'
+        width:'100%',
+        height:'100%',
+        backgroundImage:"url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')",
+        backgroundSize:"cover",
+        zIndex:1,
       }
     }
     return (
       
         <div  className="Games" style={styles.Games}>
-           <h3 >Games</h3>
-           <img style={{padding:5}}  width='20' height="16" src="https://www.flaticon.com/svg/static/icons/svg/565/565870.svg"/>
-
+         <h1>Games</h1>
         </div>
 
     );

@@ -19,3 +19,39 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.width-50{
+  width: 50% !important;
+	box-shadow: 0px 0px 12px 1px rgb(82, 82, 82) !important;
+}
+.selected {
+  background-color: #171815;
+  /* padding:0px 5px; */
+  color:white;
+}
+.selectedoption{
+  background-color: #171815;
+  /* padding:0px 5px; */
+  color:white;
+}
+#selectedarrow{
+  width: 16px;
+  color: wheat;
+  filter: invert(1);
+}
+.selectedoption{
+  position: relative;
+
+}
+.Backarrow{
+  display: inline;
+  padding:15px 7px;
+}
+.Games h1{
+  color: #d3d3d3;
+}
+.Coverflow h1{
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  color: #d3d3d3;
+}

@@ -6,20 +6,27 @@ class Menu extends React.Component{
     const styles={
         Menu:{
         // marginTop:7,
-        width:150,
+        width:170,
         height:320,
         backgroundColor:'#def3f6',
         backgroundSize:'cover',
-        // borderRadius:'10px',
-        display:'none',
-      
+        borderRadius:'10px',
+        transform:'translateX(-180px)',
+        transition:'0.7s all',
+        borderRadius:'0px 10px 10px 0px',
+        zIndex:5,
       }
     }
     return (
       
         <div className="Menu" id="Menu" style={styles.Menu}>
             <h2 style={{padding:20}}>IPOD</h2>
-            <MenuItems/>
+            <MenuItems
+            menuOptions={this.props.menuOptions}
+            selected={this.props.selected}
+            musicMenu={this.props.musicMenu}
+            okselected={this.props.okselected}
+            />
         </div>
 
     );

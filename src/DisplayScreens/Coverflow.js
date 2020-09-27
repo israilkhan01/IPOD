@@ -5,19 +5,17 @@ class Coverflow extends React.Component{
   render(){
     const styles={
         Coverflow:{
-        padding:'15px 0px',
-        // width:150,
-        display:'flex',
-        justifyContent:'space-between',
-        fontWeight:300,
-        borderBottom:'0.1px solid lightgrey'
+          width:'100%',
+          height:'100%',
+          backgroundImage:"url('https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')",
+          backgroundSize:"auto",
+          zIndex:1,
       }
     }
     return (
       
         <div className="Coverflow" style={styles.Coverflow}>
-          <h3>Coverflow</h3>            
-          <img style={{padding:5}} width='20' height="16" src="https://www.flaticon.com/svg/static/icons/svg/565/565870.svg"/>
+          <h1>CoverFlow</h1>
         </div>
 
     );

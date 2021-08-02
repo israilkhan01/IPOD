@@ -4,7 +4,8 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 import './index.css';
 import App from './App';
-import { isEmptyObject } from 'jquery';
+import * as serviceWorker from './serviceWorker';
+// import { isEmptyObject } from 'jquery';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCrDRCK4FiTPTBiG7Zs1LZPl-swcWilUM4",
@@ -19,9 +20,8 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App/>,
   document.getElementById('root')
 );
 
+serviceWorker.unregister();

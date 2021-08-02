@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: lightslategray;
-  background-image: url('https://images.unsplash.com/photo-1513639231791-f8d3fc39db82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');
+  background-image: url('https://images.unsplash.com/photo-1498721441674-67b1e1e17a5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
   padding: 0;
   background-size: cover;
   box-sizing: border-box;
@@ -54,4 +54,66 @@ code {
   left: 25%;
   top: 40%;
   color: #d3d3d3;
+}
+.loading-screen{
+   color: white;
+
+}
+.all-songs{
+  background-color: #000000;
+  height: 100%;
+}
+.all-songs-heading{
+  color: white;
+  background-color: #f0934a;
+  padding: 5px 0px;
+}
+.all-songs-list{
+  text-align: start;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 5px;
+  /* overflow: scroll; */
+}
+.selected-song{
+  padding: 5px;
+  font-size: 13px;
+  min-height: 20px;
+  font-weight: 500;
+  background-color: #f0934a;
+}
+.item{
+  padding: 5px;
+  font-size: 13px;
+  min-height: 20px;
+  font-weight: 500;
+  border-bottom: 1px solid #f0934a;
+  
+}
+.instruction-all-songs{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  background-color: #f0934a;
+}
+.PlayMusic{
+  position: relative;
+  height: 100%;
+  background-color: #2c1310;
+  /* z-index: 5; */
+}
+#audio{
+  width: 250px;
+}
+.PlayMusic img{
+  width: 150px;
+  height: 150px;
+  margin: 30px;
+  border-radius: 2px;
+}
+.MusicName{
+  color: #f0934a;
+  font-weight: 500;
 }

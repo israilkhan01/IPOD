@@ -14,66 +14,80 @@ class Allsongs extends React.Component {
  }
   componentDidMount()
     {   
-      firebase
-        .firestore()
-        .collection('All Music')
-        .get()
-        .then((snapshot)=>{
-          console.log(snapshot)
-          snapshot.docs.map((doc)=>{
-           console.log(doc.data()) 
-          });
-          const musics = snapshot.docs.map((doc)=>{
-            const data= doc.data();
-            data['id']= doc.id;
-            return data;
-          })
-          this.setState({
-            All_Music:musics,
-            loading:false
-          })
-        });
-        // firebase.storage().ref().child('music').listAll()
-        //     .then((data) =>
-        //     {
-        //         data.items.forEach(async (ref) =>
-        //         {
-        //             await ref.getDownloadURL()
-        //                 .then((url) =>
-        //                 {
-        //                     this.new_data_array.push({ name: ref.name, url: url });
-        //                     if (this.new_data_array.length === 6)//load the component when all the songs are added to the array.
-        //                     {
-        //                         this.setState({
-        //                             allMusic: this.new_data_array,
-        //                             loading: false
-        //                         });
-        //                     }
-        //                 })
-        //                 .catch((error) =>
-        //                 {
-        //                     console.log(error);
-        //                 })
-        //         })
-        //     })
-        //     .catch((error) =>
-        //     {
-        //         if (error)
-        //         {
-        //             console.log(error);
-        //         }
-        //     })
+      // firebase
+      //   .firestore()
+      //   .collection('All Music')
+      //   .get()
+      //   .then((snapshot)=>{
+      //     console.log(snapshot)
+      //     snapshot.docs.map((doc)=>{
+      //      console.log(doc.data()) 
+      //     });
+      //     const musics = snapshot.docs.map((doc)=>{
+      //       const data= doc.data();
+      //       data['id']= doc.id;
+      //       return data;
+      //     })
+      //     this.setState({
+      //       All_Music:musics,
+      //       loading:false
+      //     })
+      //   });
+      // console.log(firebase.storage().ref().listAll());
+        firebase.storage().ref().child('/').listAll()
+            .then((data) =>
+            {
+                data.items.forEach(async (ref) =>
+                {
+                    await ref.getDownloadURL()
+                        .then((url) =>
+                        {
+                            this.new_data_array.push({ name: ref.name, url: url });
+                            if (this.new_data_array.length === 7)//load the component when all the songs are added to the array.
+                            {
+                                this.setState({
+                                  All_Music: this.new_data_array,
+                                    loading: false
+                                });
+                            }
+                        })
+                        .catch((error) =>
+                        {
+                            console.log(error);
+                        })
+                })
+            })
+            .catch((error) =>
+            {
+                if (error)
+                {
+                    console.log(error);
+                }
+            })
     }
   render(){
     const styles={
-        Allsongs:{
+      Allsongs:{
+        position:'relative'
+      },
+        item:{
         // width:150,
         display:'block',
         justifyContent:'space-between',
-        padding:'15px 0px',
+        padding:'10px 0px',
+        color:'white',
         fontWeight:300,
       }
     }
+    if (this.props.songIndex !== -1)
+        {
+            return <PlayMusic
+                songIndex={this.props.songIndex}
+                Songs={this.state.All_Music}
+                currentlyOnPlayMusicScreen={this.props.currentlyOnPlayMusicScreen}
+                playPauseButtonClicked={this.props.playPauseButtonClicked}
+            />;
+        }
     return (this.state.loading ? 
             
         <div className='loading-screen'>
@@ -91,8 +105,8 @@ class Allsongs extends React.Component {
                 {
                   // {this.props.currentMusicSelection === index ? 'selected-song' : ''}
                     return (
-                        <div className='item' key={index}>
-                            {item.music}
+                        <div className={this.props.current_music_selection === index ? 'selected-song' : 'item'} key={index} style={styles.Allsongs}>
+                            {item.name}
                         </div>
                     )
                 })}

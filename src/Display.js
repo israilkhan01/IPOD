@@ -45,32 +45,38 @@ class PhoneDisplay extends React.Component {
         <Menu
           menuOptions={this.props.menuOptions}
           musicMenu={this.props.musicMenu}
+          showmusic={this.props.showmusic}
           selected={this.props.selected}
           okselected={this.props.okselected}
         />
        <div className="optionBackground" style={styles.Games}>
-       {this.props.selected==0&&!handler&&this.props.okselected[0] ?
+       {this.props.selected===0&&!handler&&this.props.okselected[0] ?
           <Game /> : ''
         }
         {
-         this.props.selected==3&&!handler&&this.props.okselected[3] ?
+         this.props.selected===3&&!handler&&this.props.okselected[3] ?
             <Coverflow /> : ''
         }
         {
-          this.props.selected==2&&!handler&&this.props.okselected[2]  ?
+          this.props.selected===2&&!handler&&this.props.okselected[2]  ?
             <Setting /> : ''
         }
         {
-          this.props.selected==1&&handler&&this.props.okselected[1]?
+          this.props.selected===1&&handler&&this.props.okselected[1]?
             <Artist /> : ''
         }
         {
-         this.props.selected==2&&handler&&this.props.okselected[2]?
+         this.props.selected===2&&handler&&this.props.okselected[2]?
             <Albums /> : ''
         }
          {
-         this.props.selected==0&&handler&&this.props.okselected[0]?
-            <Allsongs /> : ''
+         this.props.selected===0&&handler&&this.props.okselected[0]?
+            <Allsongs
+            currentlyOnPlayMusicScreen={this.props.currentlyOnPlayMusicScreen}
+            playPauseButtonClicked={this.props.playPauseButtonClicked}
+            songIndex={this.props.songIndex}
+            current_music_selection = {this.props.current_music_selection}
+            /> : ''
         }
        </div>
       </div>

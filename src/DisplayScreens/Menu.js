@@ -8,7 +8,7 @@ class Menu extends React.Component{
         // marginTop:7,
         width:170,
         height:320,
-        backgroundColor:'#def3f6',
+        backgroundColor:'#f9c58e',
         backgroundSize:'cover',
         borderRadius:'10px',
         transform:'translateX(-180px)',
@@ -22,6 +22,7 @@ class Menu extends React.Component{
         <div className="Menu" id="Menu" style={styles.Menu}>
             <h2 style={{padding:20}}>IPOD</h2>
             <MenuItems
+            showmusic={this.props.showmusic}
             menuOptions={this.props.menuOptions}
             selected={this.props.selected}
             musicMenu={this.props.musicMenu}

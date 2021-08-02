@@ -1,8 +1,4 @@
 import React from 'react';
-import Music from './Music';
-import Games from './Games';
-import Setting from './Setting';
-import Coverflow from './Coverflow';
 class MenuItems extends React.Component {
   render() {
     const styles = {

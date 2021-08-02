@@ -99,7 +99,7 @@ class Buttons extends React.Component{
                 <button onClick={this.props.menubutton} id="top" className='top' style={styles.top}></button>
                 <button className="bottom" style={styles.bottom}></button>
                 <button onClick={this.props.leftbutton} className="left" style={styles.left}></button>
-                <button className="right" style={styles.right}></button>
+                <button onClick={this.props.rightbutton} className="right" style={styles.right}></button>
                 <div onClick={this.props.okButton} className="outer-circle" style={styles.ic}>
                 <h2 onClick={this.props.okButton} style={styles.select}>Select</h2>
                 </div>

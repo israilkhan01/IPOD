@@ -1,3 +1,19 @@
+This is one of my starting project in **React**
+
+<h4>Functionalities: </h4>
+<li> Move cursor is circular </li>
+<li> Fetch songs from firebase storage </li>
+<br>
+<div>
+ 
+![](gitImages/Screenshot(225).png)
+
+![](gitImages/Screenshot(224).png)
+
+![](gitImages/Screenshot(223).png)
+  
+  </div>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
